@@ -15,5 +15,5 @@ print "Hi, my name is " + str(Myname)  + " Im not really that tall " + str(MyHei
 print "Hi my name is " + str(Myname) + ". Im not really tall, I am " + str(MyHeight) + ". In feet my height is " + str(MyHeightF) + ". Which is lower " + str(MyAverageHeight) + "cm than korean average height " + ". I am currently at highschool " + str(Myage) + " Years Old " + ". I will live more " + str(Lastmore) + ". This pyhton is made by " + str(Myname) + ". It can also do math, if Length of Rectangle is " + str(LengthS) + " The volume of the cube will be " + str(VolumeC) + ". Also the Area of the rectangle will be " + str(AreaR) + ". It is nice to meet you " #This is the variable for more than 6 vocabes i used
 Wink = ";)" #This is the variable for Wink face
 WinkT = Wink * 10000 #This is the variable for thousand Wink face
-print WinkT #This is the variable to prin thousand Wink face
+print WinkT #This is the variable to print thousand Wink face
 "gg"
