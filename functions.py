@@ -23,10 +23,15 @@ def sphere_volume(r):
 	a = r**3*math.pi*4/3
 	return a
 
-def avg_volume(a, b):
-	c =((a**3*math.pi*4/3)+(b**3*math.pi*4/3))
-	d =c/2
-	return d
+def avg_volume( a, b):
+	t = a/2
+	y = b/2
+	c = t**3*math.pi*4/3
+	d = y**3*math.pi*4/3
+	e = (c+d)/2
+	return e
 
-print avg_volume(10, 20)
+print avg_volume( 10, 20)
+
+
 	
