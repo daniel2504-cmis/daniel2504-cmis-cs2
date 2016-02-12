@@ -31,7 +31,21 @@ def avg_volume( a, b):
 	e = (c+d)/2
 	return e
 
-print avg_volume( 10, 20)
+def area(a, b, c):
+	p = (a+b+c)/2
+	e = p-a
+	f = p-b
+	g = p-c
+	d = g*f*e
+	h = d*p
+	i = math.sqrt(h)
+	return i
 
+def right_align(a):
+	a = 80 - len(a)
+	b = 
+
+print right_align(a)
+	
 
 	
