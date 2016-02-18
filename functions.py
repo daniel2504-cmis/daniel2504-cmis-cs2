@@ -42,10 +42,37 @@ def area(a, b, c):
 	return i
 
 def right_align(a):
-	a = 80 - len(a)
-	b = 
+	b = 84 - len(a)
+	c = " " * b + a
+	return c
 
-print right_align(a)
+def center(a):
+	b = 84 - len(a)
+	c = b/2
+	d = " " * c + a
+	return d
+
+def msg_box(a):
+	b = "+"+"-"*len(a)+"----"+"+"
+	c ="|  " + a + "  |"
+	d = "+"+"-"*len(a)+"----"+"+"
+	return b + "\n" + c + "\n" + d 
 	
+print add(1,2)
+print sub(3,1)
+print mul(4,2)
+print div(4,2)
+print hours_from_seconds(3)
+print area_of_circle(5)
+print sphere_volume(5)
+print avg_volume( 3, 2)
+print area(1, 4, 3)
+print right_align("Greetings")
+print center("Steven plz")
+print msg_box("Hello")
+print msg_box("NP")
+
+print msg_box
+
 
 	
