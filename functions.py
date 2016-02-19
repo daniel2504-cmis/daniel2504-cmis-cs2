@@ -42,12 +42,12 @@ def area(a, b, c):
 	return i
 
 def right_align(a):
-	b = 84 - len(a)
-	c = " " * b + a
+	b = 80 - len(a)
+	c = " " * b +a
 	return c
 
 def center(a):
-	b = 84 - len(a)
+	b = 80 - len(a)
 	c = b/2
 	d = " " * c + a
 	return d
@@ -58,6 +58,14 @@ def msg_box(a):
 	d = "+"+"-"*len(a)+"----"+"+"
 	return b + "\n" + c + "\n" + d 
 	
+def msg_box2(a):
+	e = str(a)
+	b = "+"+"-"*len(e)+"----"+"+"
+	c ="|  " + e + "  |"
+	d = "+"+"-"*len(e)+"----"+"+"
+	return b + "\n" + c + "\n" + d 
+
+#Call each of the functions you defined 2 times and store the result in a variable.
 print add(1,2)
 print sub(3,1)
 print mul(4,2)
@@ -72,7 +80,17 @@ print center("Steven plz")
 print msg_box("Hello")
 print msg_box("NP")
 
-print msg_box
-
+#print output
+print msg_box2(add(1,2))
+print msg_box2(sub(3,1))
+print msg_box2(mul(4,2))
+print msg_box2(div(4,2))
+print msg_box2(hours_from_seconds(3))
+print msg_box2(area_of_circle(5))
+print msg_box2(sphere_volume(5))
+print msg_box2(avg_volume(3,2))
+print msg_box2(area(1,4,3))
+print msg_box(right_align("Greetings"))
+print msg_box(center("Steven plz"))
 
 	
