@@ -26,8 +26,8 @@ def sphere_volume(r):
 def avg_volume( a, b):
 	t = a/2
 	y = b/2
-	c = t**3*math.pi*4/3
-	d = y**3*math.pi*4/3
+	c = sphere_volume(t)
+	d = sphere_volume(y)
 	e = (c+d)/2
 	return e
 
