@@ -1,6 +1,9 @@
-def add(x,y):
-	z = x + y
-	return x + y
+import math
+
+def circlearea(x):
+	z = x**2
+	y = z/(4*math.pi)
+	return y
 
 def output(name, x, y, z):
 	a = """
