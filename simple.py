@@ -1,26 +1,44 @@
+#Math
 import math
 
-def circlearea(x):
-	z = x**2
-	y = z/(4*math.pi)
-	return y
+#Function Definition
+def add(x,y):
+	return int(x) + int(y)
 
-def output(name, x, y, z):
-	a = """
+def kiteperimeter(x,y):
+	z = add(x,y)
+	area = 2*z
+	return area
+
+
+
+#Output
+def output(name, k1, k2, k):
+	out = """
 Hey {}
 Did you know:
-{} + {} = {}
-""". format(name, x, y, z) 
-	return a
-
+The kite perimeter will be 2({} + {}) = {}
+""". format(name, k1, k2, k)
+	return out
+#Main
 def main():
+	#Input Section
 	name = raw_input("What's your name?: ")
-	x = raw_input("Type a number: ")
-	y = raw_input("Type a number: ")
+	k1 = raw_input("Kite first side: ")
+	k2 = raw_input("kite second side: ")
 
-	z = add(int(x), int(y))
+	#Processing
+	k = int(kiteperimeter(k1,k2))
+	
+	Write a small program that does the follow:
+defines 2 functions + a main() function
+uses raw_input to get user input (must get 3 pieces of information)
+uses type conversion functions appropriately
+performs some calculation with the user input
 
-	a = output(name, x, y, z)
-	print a
+	#Output
+	out = output(name, k1, k2, k)
+	print out
 
+#Main Call
 main()
