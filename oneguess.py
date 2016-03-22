@@ -17,8 +17,11 @@ def output(answer, guess, tada):
 The target was {}.
 Your guess was {}.
 That's under by {}.""". format(answer,guess,tada)
-		return output
+	return output
 	
+	
+
+
 #Main
 def main():
 	#Input Section
@@ -29,14 +32,13 @@ def main():
 
 	#Processing
 	guess = int(raw_input("What do you think it is?: "))
-	if 
-	False = guess < int(minimum)
-	elif
-	False = guess > int(maximum)
-	else
-	True
 	answer = think(int(minimum),int(maximum))
-	tada = sub(answer, guess)
+	if int(guess) > int(maximum):
+        	print "The guess is too high"   
+	elif int(guess) < int(minimum):
+        	print "The guess is too low"
+	
+	else: tada = sub(answer, guess)
 
 	#Output
 	print output(answer, guess, tada)
