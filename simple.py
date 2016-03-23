@@ -30,11 +30,7 @@ def main():
 	#Processing
 	k = int(kiteperimeter(k1,k2))
 	
-	Write a small program that does the follow:
-defines 2 functions + a main() function
-uses raw_input to get user input (must get 3 pieces of information)
-uses type conversion functions appropriately
-performs some calculation with the user input
+
 
 	#Output
 	out = output(name, k1, k2, k)
