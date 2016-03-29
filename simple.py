@@ -20,6 +20,7 @@ Did you know:
 The kite perimeter will be 2({} + {}) = {}
 """. format(name, k1, k2, k)
 	return out
+
 #Main
 def main():
 	#Input Section
@@ -30,8 +31,6 @@ def main():
 	#Processing
 	k = int(kiteperimeter(k1,k2))
 	
-
-
 	#Output
 	out = output(name, k1, k2, k)
 	print out
