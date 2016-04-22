@@ -1,21 +1,34 @@
-def countup(n,z):
+def countup(n):
 
-	if int(n) >= int(z):
+	if int(n) >= 0:
 		print "WoW!"
 	else:
 		print n
 		countup(n+1)
 
+def countdown(n):
+	
+	if int(n) >= 0:
+		print "WoW!"
+	else:
+		print n
+		countdown(n-1)
+
+def countup_from(start, stop):
+	if start >= stop:
+		print "WoW!"
+	else:
+		print start
+		countup_from(start+1, stop)
+
+def countdown_from(start, stop):
+	pass
+	countdown_from(start-1, stop)
+
 def main():
-	b = raw_input("The wow number:")
-	a = raw_input("Write something that goes lower than the wow number:")
-	if int(a) >= int(b):
-		print "Do u math?"
-		exit()
-
-
-
-	countup(a,b)
-	return
+	
+	a = int(raw_input("Number that we will call WOW!:"))
+	b = int(raw_input("Number we will start counting:"))
+	return countup_from(b, a)
 
 main()
