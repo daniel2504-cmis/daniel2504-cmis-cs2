@@ -1,3 +1,4 @@
+# if i use "#", it is used so it wont activate. (SO just erase # if you want it to work)
 
 def countdown(n):
 	
@@ -18,28 +19,29 @@ def countdown_from(start, stop):
 	pass
 	countdown_from(start-1, stop)
 
-def main():
+# def main():
 	
 	a = int(raw_input("Number that we will call WOW!:"))
 	b = int(raw_input("Number we will start counting:"))
 	return countup_from(b, a)
 
-main()
+# main()
 
-def adder():
-	total = 0
-	print "Running Total: " + str(total)
+# print "Running Total: 0.0"
+
+def adder(number):
+	total = 0.0
 	x = raw_input("Next Number:")
-	if total += float(x):
+	if x: 
+		total += float(x) + number
 		print "The sum is " + str(total)
-		x
-	else:
+		return adder(total)
+	else:	
+		total = number
 		print "The sum is " + str(total)
-		exit()
+# print adder(0.0)
 
-def adder2():
-	number = raw_input("Next number: ")
-	if number == '':
-		pass
-	else:
-		adder2()
+def biggest():
+	x = raw_input("Next Number:")
+	if x:
+		
