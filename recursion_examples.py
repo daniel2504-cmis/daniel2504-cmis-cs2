@@ -1,4 +1,4 @@
-# if i use "#", it is used so it wont activate. (SO just erase # if you want it to work)
+# if i use "#", it is used so it won't activate. (SO just erase # if you want it to work)
 
 def countdown(n):
 	
@@ -41,7 +41,24 @@ def adder(number):
 		print "The sum is " + str(total)
 # print adder(0.0)
 
-def biggest():
-	x = raw_input("Next Number:")
-	if x:
-		
+def biggest(number):
+	inp = raw_input("Next Number:")
+	if inp == '':
+		return str(number)
+	elif number > float(inp):
+		return biggest(number)
+	else:
+		return biggest(float(inp)) 
+
+# print biggest(float(raw_input("Next:")))
+
+def smallest(number):
+	inp = raw_input("Next Number:")
+	if inp == '':
+		return str(number)
+	elif number < float(inp):
+		return smallest(number)
+	else:
+		return smallest(float(inp))
+
+# print smallest(float(raw_input("Next:")))
