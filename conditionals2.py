@@ -23,7 +23,7 @@ You : "Who was with him at house?"
 Cop: There was five people. His father, Noah Ma, his old friend, Jaina Proudmoore, the homeowner, Steven Lee, his girlfriend, Emma Skywalker, and plumber, Dawit Cho. Five people looks all inocent."
 You: "Ofcourse, they are. Lets go look at them."
 
-At night, you need to decide who is the killer and you have three chances to find evidences, you can ask two people and go to one location. Good luck!"""
+At night, you need to decide who is the killer and you have three chances to find evidences: you can ask two people and go to one location. Good luck!"""
 
 #Game Starts! Import
 import math
@@ -31,13 +31,7 @@ import random
 
 #Functions
 
-def Ask(x):
-	
-
-def location(x):
-	
-
-def deadtrap(x):
+def screwthisgame(x):
 	x = raw_input("Hey way are u going! you gotta play the game!(Yes or No):")
 	if x = "No"
 	print "Well gg"
@@ -100,10 +94,65 @@ def Steven(x):
 main():
 	#Input
 	x1 = raw_input("Who will you ask?(Option: Noah, Dawit, Jaina, Emma, Steven, and Cop):")
+	if x1 == "Noah":
+		Noah(x)
+	elif x1 == "Dawit":
+		Dawit(x)
+	elif x1 == "Jaina":
+		Jaina(x)
+	elif x1 == "Steven":
+		Steven(x)
+	elif x2 == "Cop":
+		Cop(x)
+	else:
+		print "Type correctly"
+	exit()
+
 	x2 = raw_input("Who will you ask?(Option: Noah, Dawit, Jaina, Emma, Steven, and Cop):")
+	if x2 == "Noah":
+		Noah(x)
+	elif x2 == "Dawit":
+		Dawit(x)
+	elif x2 == "Jaina":
+		Jaina(x)
+	elif x2 == "Steven":
+		Steven(x)
+	elif x2 == "Cop":
+		Cop(x)
+	else:
+		print "Type correctly"
+	exit()
+
 	y = raw_input("Where will you go?(Option: Police Car, Screw this game, Arthas's room, and A.C. Room: ")
-
-	process:
+	if y == "Police Car":
+		Policecar(x)
+	elif y == "Screw this game"
+		screwthisgame(x)
+	elif y == "Arthas's room"
+		ArthasRoom(x)
+	elif y == "A.C. Room"
+		ACRoom(x)
+	else:
+		print "Type correctly"
+	exit()
+	#Final Guess
+	print "Everybody gathered around to the livingroom. It is your time to conclude who is the criminal"
+	opinion = raw_input("The murderer is .....")
+	if opinion == "Noah":
+		
+	elif opinion == "Dawit":
+		"your guess is wrong."
+		exit()
+	elif opinion == "Jaina":
+		print "your guess is wrong."
+		exit()
+	elif opinion == "Steven":
+		print "your guess is wrong."
+		exit()
+	elif opinion == "Cop":
+		print "Your guess is correct. Cop loved Arthas' girlfriend Emma and killed Arthas to take her."
+	else:
+		print "Type correctly"
+	exit()
 	
-	
-
+main()
