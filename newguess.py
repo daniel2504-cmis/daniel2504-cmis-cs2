@@ -1,19 +1,28 @@
 #import random
 import random
 
-def guess(x,y,z,w):
-	if y == 0:
-		return str(w)
-	elif int(x) < z:
+def guess(tell,roundnumber,answer,wins,chances):
+	print answer
+	if chances == 0:
+		print "Your not really good at this game"
+		guess2(roundnumber,answer,wins)
+	elif tell < answer:
 		print "Too low!"
-		guess(raw_input("Your guess:"),y,z,w)
-	elif int(x) > z:
+		guess(int(raw_input("Your guess:")),roundnumber,answer,wins,chances-1)
+	elif tell > answer:
 		print "Too high!" 
-		guess(raw_input("Your guess:"),y,z,w)
-	else:
+		guess(int(raw_input("Your guess:")),roundnumber,answer,wins,chances-1)
+	elif tell == answer:
 		print "Correct!"
-		print "Round" + str(y)
-		guess(raw_input("Your guess:"),y+1,random.randint(0,100),w+1)
+		print "Round" + str(wins+1)
+		guess(int(raw_input("Your guess:")),answer,random.randint(0,100),wins+1,4)
 
+def guess2(x,y,c):
+	if x == 0:
+		print str(y)
+		exit()
+	else: 
+		print "Round" + str(wins-1)
+		returnguess(int(raw_input("Your guess:")),roundnumber-1,random.randint(0,100),c,4)
 print "Round 1"
-print guess(raw_input("Your guess:"),2,random.randint(0,100),0)
+guess(int(raw_input("Your guess:")),2,random.randint(0,100),0,4)
