@@ -4,26 +4,28 @@ import random
 print """This game is about one prisoner trying to escape the jail. He has been in this prison for 10 years, he is sick of this place and you need to help him to escape."""
 
 def warmup():
-	x = raw_input("Ok for warmup you gotta type exactly same like the options (Ok):")
-	if x == "Ok":
+	reply = raw_input("Ok for warmup you gotta type exactly same like the options (Ok):")
+	if reply == "Ok":
 			return warmup2()
 	exit()
 
 def warmup2():
-	x = raw_input("This is made by Daniel Kwon (Ok):")
-	if x == "Ok":
+	letsstart = raw_input("This is made by Daniel Kwon (Ok):")
+	if letsstart == "Ok":
 		return escapetool()
 	exit()
 
 def escapetool():
-	x = raw_input("Ok what tool should I take to escape?(Spoon, Food, Glasses, John Cena):")
-	if x == "John Cena":
+	tool = raw_input("Ok what tool should I take to escape?(Spoon, Food, Glasses, John Cena):")
+	if tool == "John Cena":
 		print "JOOOOOHHHNNN CEEENNANANANAN(Epic Music comes out)"
 		exit()
-	elif x == "Spoon":
+	elif tool == "Spoon":
 		return escapespoon()
-	elif x == "Glasses":
+	elif tool == "Glasses":
 		return escapeglasses()
+	elif tool == "Daniel'slove":
+		print "AHHHHH~~~ Ok you escaped"
 	else:
 		print "You just ate your poisonous food"
 		exit()
@@ -31,8 +33,8 @@ def escapetool():
 
 def escapespoon():
 	print "You started digging the floor with spoon"
-	y = raw_input("What are you doing?? Ask a fellow prisoner(I'm trying to escape or Mind your own buisness):")
-	if y == "Mind your own buisness":
+	reply = raw_input("What are you doing?? Ask a fellow prisoner(I'm trying to escape or Mind your own buisness):")
+	if reply == "Mind your own buisness":
 		print "Your fellow was actually JOHN CENA. JOOOOOHHHNNN CEEENNANANANAN(Epic Music comes out)"
 		exit()
 	else:
@@ -41,16 +43,16 @@ Your fellow friend followed you! But his not gonna help for the entire game."""
 		return escaperun()
 
 def escapeglasses():
-	x = raw_input("Hmmm I don't wear glasses but I can try (Yes or No):")
-	if x == "Yes":
+	wear = raw_input("Hmmm I don't wear glasses but I can try (Yes or No):")
+	if wear == "Yes":
 		print """You could see something outside the wall and it was...............JOOOOOHHHNNN CEEENNANANANAN(Epic Music comes out)"""
 		exit()
 	else:
 		return escaperun()
 
 def escaperun():
-	x = raw_input("There is stair where should I run? (1st floor or 2nd floor):")
-	if x == "1st floor":
+	answer = raw_input("There is stair where should I run? (1st floor or 2nd floor):")
+	if answer == "1st floor":
 		return Cops()
 	else:
 		return Math()
@@ -58,8 +60,8 @@ def escaperun():
 def Cops():
 	bullet = random.randint(1,3)
 	print "The cops saw you and shooting at you! You got a dodge the bullet in matrix style!!(type 1 or 2 or 3 to dodge cop's random bullets)"
-	y = raw_input("Which way 1 or 2 or 3?:")
-	if bullet == int(y):
+	dodge = raw_input("Which way 1 or 2 or 3?:")
+	if bullet == int(dodge):
 		print "You got shot and killed"
 		exit()
 	else:
@@ -68,8 +70,8 @@ def Cops():
 
 def Cops2():
 	bullet = random.randint(1,3)
-	y = raw_input("Which way 1 or 2 or 3?:")
-	if bullet == int(y):
+	dodge = raw_input("Which way 1 or 2 or 3?:")
+	if bullet == int(dodge):
 		print "You got shot and killed"
 		exit()
 	else:
@@ -77,9 +79,9 @@ def Cops2():
 		return Cops3()
 
 def Cops3():
-	x = random.randint(1,3)
-	y = raw_input("Which way 1 or 2 or 3?:")	
-	if x == int(y):
+	bullet = random.randint(1,3)
+	dodge = raw_input("Which way 1 or 2 or 3?:")	
+	if bullet == int(dodge):
 		print "You got shot and killed"
 		exit()
 	else:
@@ -89,8 +91,8 @@ def Cops3():
 def Math():
 	print "John Cena stood in your way"
 	print "Don't worry I'm not gonna fight this time. But you gotta solve quiz to pass"
-	x = raw_input("What month is Daniel's birthday?")
-	if int(x) == 2:
+	question = raw_input("What month is Daniel's birthday?")
+	if int(question) == 2:
 		return lastrun()
 	else:
 		print "No your wrong. JOOOOOHHHNNN CEEENNANANANAN(Epic Music comes out)"
@@ -98,8 +100,8 @@ def Math():
 
 def lastrun():
 	print "You see a door, if you pass through this door you will escape but suddenly somebody shot bullet."
-	x = random.random()
-	if x < 50:
+	shot = random.random()
+	if shot < 50:
 		print "But the bullet missed"
 		return lastrun2()
 	else:
@@ -107,18 +109,18 @@ def lastrun():
 		exit()
 
 def lastrun2():
-	x = raw_input("Oh no what should I do?(Run away or fight or stay):")
-	if x == "Run away":
+	choose = raw_input("Oh no what should I do?(Run away or fight or stay):")
+	if choose == "Run away":
 		print "He kept shooting and you died"
 		exit()
-	elif x == "stay":
+	elif choose == "stay":
 		print "Suddenly, John Cena came out and helped you.JOOOOOHHHNNN CEEENNANANANAN(Epic Music comes out). You successfully escaped with John Cena"
 	else:
 		return fight()
 
 def fight():
-	x = raw_input("kick or punch?:")
-	if x == "punch":
+	choose = raw_input("kick or punch?:")
+	if choose == "punch":
 		print "He blocked your punch and shot you"
 		exit()
 	else:
@@ -126,11 +128,11 @@ def fight():
 		return fight2()
 
 def fight2():
-	x = raw_input("get the gun or kick or punch:")
-	if x == "punch":
+	choose = raw_input("get the gun or kick or punch:")
+	if choose == "punch":
 		print "You punched him on the face he started to run to the gun."
 		return fight3()
-	elif x == "kick": 
+	elif choose == "kick": 
 		print "He blocked your kick and you fell down."
 		return fightlay()
 	else:
@@ -138,11 +140,11 @@ def fight2():
 		return fightlay()
 
 def fight3():
-	x = raw_input("get the gun or kick or punch:")
-	if x == "punch":
+	choose = raw_input("get the gun or kick or punch:")
+	if choose == "punch":
 		print "He was bleeding badly now."
 		return fight4()
-	elif x == "kick":
+	elif choose == "kick":
 		print "He was bleeding badly now."
 		return fight4()
 	else:
@@ -150,11 +152,11 @@ def fight3():
 		return fightlay()
 
 def fight4():
-	x = raw_input("get the gun or kick or punch:")
-	if x == "punch":
+	choose = raw_input("get the gun or kick or punch:")
+	if choose == "punch":
 		print "He blocked your punch and he kicked you to your stomach."
 		return fight5()
-	elif x == "kick":
+	elif choose == "kick":
 		print "He fainted by your kick and you successfully ran away."
 	else:
 		print "You grabbed the gun and shot at him. You successfully ran away."
@@ -177,8 +179,8 @@ def fightlay():
 		exit()
 
 def fight5():
-	x = raw_input("kick or punch:")
-	if x == "kick":
+	choose = raw_input("kick or punch:")
+	if choose == "kick":
 		print "He blocked your kick and hit you on the face. You fainted(Game Over)"
 		exit()
 	else:
