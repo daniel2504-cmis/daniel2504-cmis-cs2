@@ -31,25 +31,41 @@ def humanguess(tell, answer, humanwins, AIwins, chances, rounds):
 	print answer
 	if chances == 0:
 		print "Your not really good at this game"
-		return AIguess()
+		AIguess(50, 0, 100, humanwins, AIwins, 5, rounds)
 	elif tell < answer:
 		print "Too low!"
-		humanguess(int(raw_input("Your guess:")), answer, humanwins, AIwins, chances-1, rounds):
+		humanguess(int(raw_input("Your guess:")), answer, humanwins, AIwins, chances-1, rounds)
 	elif tell > answer:
 		print "Too high!"
-		humanguess(int(raw_input("Your guess:")), answer, humanwins, AIwins, chances-1, rounds):
+		humanguess(int(raw_input("Your guess:")), answer, humanwins, AIwins, chances-1, rounds)
 	elif tell == answer:
 		print "Correct!"
 		print "Round " + str(rounds-1)
-		AIguess(50, humanwins, AIwins, chances, rounds)
+		AIguess(50, 0, 100, humanwins, AIwins, 5, rounds)
 
-def AIguess(tell, humanwins, AIwins, chances, rounds):
+def AIguess(tell, small, big, humanwins, AIwins, chances, rounds):
+	print str(tell)
+	reply = raw_input("correct(c) higher(h) lower(l): ")
+	if chances == 2:
+		AIguess2(random.randint(small, big), small, big, humanwins, AIwins, 2, rounds)
+	elif reply == "c":
+		return howmanyroundsleft(humanwins, AIwins+1, rounds-1)
+	elif reply == "h":
+		return AIguess((tell+big)/2,tell, big, humanwins, AIwins, chances-1, rounds)
+	elif reply == "l":
+		return AIguess((tell+small)/2, small, tell, humanwins, AIwins, chances-1, rounds)
+
+def AIguess2(tell, small, big, humanwins, AIwins, chances, rounds):
 	print str(tell)
 	reply = raw_input("correct(c) higher(h) lower(l): ")
 	if chances == 0:
-		print "Alphago lost once to human, so I'll understand."
-		return howmanyroundsleft(humanwins, AIwins, rounds)
-	elif reply == "c"
-		return howmanyroundsleft(humanwins, AIwins, rounds)
-	elif reply == "h"
-		return AIguess(
+		print "Alphago lost!"
+		return howmanyroundsleft(humanwins, AIwins, rounds-1)
+	elif reply == "h":
+		return AIguess2(random.randint(tell+1, big), tell, big, humanwins, AIwins, chances-1, rounds)
+	elif reply == "c":
+		return howmanyroundsleft(humanwins, AIwins+1, rounds-1)
+	elif reply == "l":
+		return AIguess2(random.randint(small, tell-1), small, tell, humanwins, AIwins, chances-1, rounds)
+
+humanguess(int(raw_input("Your guess:")), random.randint(0,100), 0, 0, 5, 6)
